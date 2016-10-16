@@ -60,9 +60,11 @@ class LoginController extends Controller
 
         if ($request->has('otp')) {
             if (Aadhaar::verifyOtp()) {
-                auth()->login(User::whereAadhaarId($request['aadhaarId'])->first());
-                return redirect('/');
+                $this->guard()->login(User::whereAadhaarId($request['aadhaarId'])->first());
+                return redirect('/home');
             }
+
+            return redirect()->back()->withErrors(['Unable to verify otp. Please try again later.']);
         }
 
         if (Aadhaar::generateOtp()) {

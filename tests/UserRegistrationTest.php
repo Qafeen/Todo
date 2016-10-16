@@ -15,16 +15,16 @@ class UserRegistrationTest extends SeleniumTestCase
     public function testAadhaarRegistration()
     {
         $form = [
-            'name' => 'Mudassir Mohammed',
-            'email' => 'hello1@mudasir.me',
-            'aadhaarId' => 795581835831,
-            'pincode' => 400052,
+            'name' => 'Mufaddal',
+            'email' => 'hello2@mudasir.me',
+            'aadhaarId' => 441197055733,
+            'pincode' => 400059,
             'password' => 'sts@123',
             'password-confirm' => 'sts@123',
         ];
 
         $this->visit('/register')
              ->submitForm('#register', $form)
-             ->hold(10);
+             ->hold(20);
     }
 }
