@@ -18,6 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->bigInteger('aadhaar_id')->unique();
+            $table->integer('pincode');
             $table->rememberToken();
             $table->timestamps();
         });

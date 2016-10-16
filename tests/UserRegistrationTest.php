@@ -8,23 +8,23 @@ use Modelizer\Selenium\SeleniumTestCase;
 class UserRegistrationTest extends SeleniumTestCase
 {
     /**
-     * A basic test example.
+     * Registration via aadhaar API
      *
      * @return void
      */
-    public function testExample()
+    public function testAadhaarRegistration()
     {
         $form = [
-            'name' => 'Mudassir Mohammed Rafique Shaikh',
-            'email' => 'hello@mudasir.me',
+            'name' => 'Mudassir Mohammed',
+            'email' => 'hello1@mudasir.me',
             'aadhaarId' => 795581835831,
             'pincode' => 400052,
-            'password' => 'lorm',
-            'password_confirmation' => 'lorm',
+            'password' => 'sts@123',
+            'password-confirm' => 'sts@123',
         ];
 
         $this->visit('/register')
-             ->submitForm('[name="submit"]', $form)
-             ->hold(3);
+             ->submitForm('#register', $form)
+             ->hold(10);
     }
 }

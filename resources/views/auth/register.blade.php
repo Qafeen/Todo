@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    <form id="register" class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -43,7 +43,7 @@
                             <label for="aadhaarId" class="col-md-4 control-label">Aadhaar Id</label>
 
                             <div class="col-md-6">
-                                <input id="aadhaarId" type="number" class="form-control" name="aadhaarId" value="{{ old('aadhaar-id') }}" required>
+                                <input id="aadhaarId" type="number" class="form-control" name="aadhaarId" value="{{ old('aadhaarId') }}" required>
 
                                 @if ($errors->has('aadhaarId'))
                                     <span class="help-block">

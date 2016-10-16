@@ -17,4 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('aadhaar/login', 'Auth\LoginController@aadhaar');
+Route::post('aadhaar/login', 'Auth\LoginController@validateAadhaar');
+
 Route::get('/home', 'HomeController@index');
