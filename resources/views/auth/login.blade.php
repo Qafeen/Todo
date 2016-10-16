@@ -7,6 +7,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
+                    @if (count($errors))
+                        <div class="alert alert-warning">{!! $errors->first() !!}</div>
+                    @endif
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
 
@@ -53,7 +56,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     Login
                                 </button>
-                                <a href="/aadhaar/login" class="btn btn-success">Register By Aadhaar</a>
+                                <a href="/aadhaar/login" class="btn btn-success">Login By Aadhaar</a>
 
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">
                                     Forgot Your Password?

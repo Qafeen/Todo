@@ -9,7 +9,7 @@
         "laravel/framework": "5.3.*",
         "guzzlehttp/guzzle": "^6.2",
         "qafeen/aadhaar": "^0.1",
-        "Modelizer/Selenium": "^1.0"
+        "Modelizer/Selenium": "@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
