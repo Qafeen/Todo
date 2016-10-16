@@ -53,6 +53,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     Login
                                 </button>
+                                <a href="/aadhaar/login" class="btn btn-success">Register By Aadhaar</a>
 
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">
                                     Forgot Your Password?

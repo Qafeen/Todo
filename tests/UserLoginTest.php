@@ -20,6 +20,6 @@ class UserLoginTest extends SeleniumTestCase
 
         $this->visit('/aadhaar/login')
              ->submitForm('#aadhaarLogin', $form)
-             ->hold(10);
+             ->hold(60);
     }
 }

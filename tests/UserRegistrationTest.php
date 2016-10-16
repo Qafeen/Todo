@@ -24,7 +24,8 @@ class UserRegistrationTest extends SeleniumTestCase
         ];
 
         $this->visit('/register')
+             ->hold(5)
              ->submitForm('#register', $form)
-             ->hold(20);
+             ->hold(10);
     }
 }
